@@ -12,9 +12,6 @@ That's it — `gradle.lockfile` gets generated in each project directory.
 
 ## Installation
 
-> [!WARNING]
-> This plugin is under development and not yet published to the Gradle Plugin Portal. For now, you can use it via a [composite build](https://docs.gradle.org/current/userguide/composite_builds.html) or `publishToMavenLocal`.
-
 **Using the plugins DSL** (recommended):
 
 ```kotlin
@@ -68,6 +65,15 @@ Gradle's `--write-locks` flag tells the dependency locking setup to write `gradl
 ```bash
 ./gradlew build
 ```
+
+## Releasing a new version
+
+1. Bump `version` in `gradle.properties`
+2. Update the version in the plugin DSL snippet in `README.md`
+3. Commit and push: `git commit -am "release 0.1.1" && git push`
+4. Create a GitHub Release with tag `v0.1.1` — this triggers the publish action automatically
+
+The git tag is the authoritative version used when publishing to the Gradle Plugin Portal.
 
 ## License
 
