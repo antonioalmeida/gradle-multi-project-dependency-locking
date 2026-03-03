@@ -17,7 +17,7 @@ That's it — `gradle.lockfile` gets generated in each project directory.
 ```kotlin
 // root build.gradle.kts
 plugins {
-    id("io.github.antonioalmeida.dependency-lock-all") version "0.1.0"
+    id("io.github.antonioalmeida.dependency-lock-all") version "0.1.1"
 }
 ```
 
@@ -30,7 +30,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("io.github.antonioalmeida:dependency-lock-all:0.1.0")
+        classpath("io.github.antonioalmeida:dependency-lock-all:0.1.1")
     }
 }
 
